@@ -3,3 +3,4 @@ Java-based Library Management System with MySQL database. Supports book manageme
 ## 🎥 Explanatory Video
 
 [![Watch the video](https://img.youtube.com/vi/7Im47_iOT3U/hqdefault.jpg)](https://www.youtube.com/watch?v=7Im47_iOT3U)
+

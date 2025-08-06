@@ -1,0 +1,14 @@
+.mainFxmlClass {
+
+}
+.selected-label{
+    -fx-text-fill:white;
+
+
+}
+.selectedLabel{
+    -fx-border-width: 4;
+    -fx-border-color: #ffc17f;
+    -fx-text-fill:white;
+    -fx-font-weight: bolder;
+}

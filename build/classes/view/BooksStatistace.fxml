@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="750.0" prefWidth="1300.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BooksStatistaceController">
+    <stylesheets>
+        <URL value="@/style/booksstatistace.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #1e93d6;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <VBox prefHeight="748.0" prefWidth="919.0" style="-fx-border-color: white;" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+               <children>
+                  <VBox prefHeight="748.0" prefWidth="1296.0" style="-fx-background-color: white;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="200.0" spacing="10.0" style="-fx-border-color: #1e93d6; -fx-background-color: white;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="700.0" spacing="10.0">
+                                 <children>
+                                    <TextField fx:id="searchTextField" onKeyReleased="#SearchTextField" prefHeight="40.0" prefWidth="350.0" style="-fx-border-color: #009654;" />
+                                    <Button mnemonicParsing="false" onAction="#Clear" prefHeight="40.0" prefWidth="120.0" style="-fx-background-color: #1e93d6;" text="Clear" textFill="WHITE" />
+                                 </children>
+                              </HBox>
+                              <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="700.0">
+                                 <children>
+                                    <ImageView fx:id="logout" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/logout.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                        <VBox prefHeight="657.0" prefWidth="1296.0" style="-fx-border-color: #1e93d6; -fx-border-width: 4;">
+                           <children>
+                              <TableView fx:id="tabelViewBookStatistace" prefHeight="657.0" prefWidth="897.0">
+                                 <columns>
+                                    <TableColumn fx:id="userIdColumn" prefWidth="175.0" text="User ID" />
+                                    <TableColumn fx:id="userNameColumn" prefWidth="175.0" text="User Name" />
+                                    <TableColumn fx:id="userImageColumn" prefWidth="175.0" text="User Image" />
+                                    <TableColumn fx:id="bookIdColumn" prefWidth="175.0" text="Book ID" />
+                                    <TableColumn fx:id="bookTitleColumn" prefWidth="175.0" text="Book Title" />
+                                    <TableColumn fx:id="bookImageColumn" prefWidth="175.0" text="Book Image" />
+                                    <TableColumn fx:id="BorrowStatusColumn" prefWidth="175.0" text="Borrow Status" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                           <VBox.margin>
+                              <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+                           </VBox.margin>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

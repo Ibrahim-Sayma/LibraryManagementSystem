@@ -1,0 +1,36 @@
+.mainFxmlClass {
+
+}
+.selected-label{
+    -fx-text-fill:white;
+
+
+}
+.selectedLabel{
+    -fx-border-width: 4;
+    -fx-border-color: #ffc17f;
+    -fx-text-fill:white;
+    -fx-font-weight: bolder;
+}
+
+.Pending_borrowStatus{
+    -fx-background-color: #67acf0;
+    -fx-text-fill:white;
+}
+.Approved_borrowStatus{
+    -fx-background-color: green;
+    -fx-text-fill:white;
+}
+.Rejected_borrowStatus{
+      -fx-background-color: red;
+    -fx-text-fill:white;
+}
+
+.Approved_btnStatus{
+    -fx-background-color: green;
+    -fx-text-fill:white;
+}
+.Rejected_btnStatus{
+      -fx-background-color: red;
+    -fx-text-fill:white;
+}

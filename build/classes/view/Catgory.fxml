@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="500.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="controller.CatgoryController">
+    <stylesheets>
+        <URL value="@/style/catgory.css" />
+    </stylesheets>
+    <children>
+        <AnchorPane layoutX="133.0" layoutY="33.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #0093b5;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Label layoutX="125.0" layoutY="59.0" style="-fx-border-radius: 4;" text="Add Catgory " textFill="WHITE">
+                    <font>
+                        <Font name="System Bold Italic" size="42.0" />
+                    </font>
+                    <effect>
+                        <Glow level="0.36" />
+                    </effect>
+                </Label>
+                <VBox layoutX="84.0" layoutY="151.0" prefHeight="186.0" prefWidth="316.0">
+                    <children>
+                        <HBox prefHeight="42.0" prefWidth="316.0">
+                            <children>
+                                <Label prefHeight="41.0" prefWidth="316.0" text="Catgory :" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="49.0" prefWidth="316.0">
+                            <children>
+                                <TextField fx:id="newCatg" prefHeight="45.0" prefWidth="321.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="86.0" prefWidth="316.0">
+                            <children>
+                                <VBox prefHeight="200.0" prefWidth="300.0">
+                                    <children>
+                                        <Button fx:id="add" mnemonicParsing="false" onAction="#addCatgory" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: green;" text="ADD" textFill="WHITE">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                                <VBox prefHeight="200.0" prefWidth="300.0">
+                                    <children>
+                                        <Button fx:id="cancel" mnemonicParsing="false" onAction="#cancelCatgory" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: #ae0404;" text="Cancel" textFill="WHITE">
+                                            <VBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </VBox.margin>
+                                            <font>
+                                                <Font size="17.0" />
+                                            </font>
+                                        </Button>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

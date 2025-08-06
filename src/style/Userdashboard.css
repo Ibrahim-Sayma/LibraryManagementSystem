@@ -1,0 +1,62 @@
+.mainFxmlClass {
+
+}
+.selected-label{
+    -fx-text-fill:white;
+
+}
+.selectedLabel{
+    -fx-border-width: 4px;
+    -fx-border-color: #970009;
+    -fx-text-fill:white;
+    -fx-font-weight: bolder;
+}
+.combo-box.valid{
+    -fx-border-color: green;
+    -fx-border-width: 4px;
+
+}
+
+.combo-box.invalid{
+    -fx-border-color: #c41313;
+    -fx-border-width: 4px;
+}
+.btn_Borrow_Borrow{
+    -fx-background-color: #0097c5;
+    -fx-text-full:white;
+
+}
+.btn_Borrow_pending{
+    -fx-background-color: #d20a4a;
+    -fx-text-full:white;
+
+
+}
+.btn_Borrow_Approved{
+    -fx-background-color: #20a204;
+    -fx-text-full:white;
+
+}
+
+.borrowedBooksContainer{
+    -fx-border-width: 6px;
+    -fx-border-color: #58bf40;
+    -fx-border-radius: 10px;
+
+}
+.titleLabel {
+    -fx-text-fill: black; 
+    -fx-font-size: 17px;  
+    -fx-font-weight: bold; 
+
+}
+
+.Pending_btnStatus{
+    -fx-background-color: #970009;
+    -fx-text-fill:white;
+}
+
+.Deleiver_Date{
+     -fx-font-size: 14px;  
+     -fx-text-fill: #999999;
+}

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="900.0" prefWidth="1800.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserDashBoardController">
+    <stylesheets>
+        <URL value="@/style/Userdashboard.css" />
+    </stylesheets>
+   <children>
+      <AnchorPane layoutX="210.0" layoutY="158.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b15d13; " AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="8.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="8.0">
+         <children>
+            <BorderPane layoutX="432.0" layoutY="275.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <HBox alignment="CENTER" prefHeight="104.0" prefWidth="1284.0" style="-fx-background-color: white; -fx-border-width: 4px; -fx-border-color: #b15d13; -fx-border-radius: 10px;" BorderPane.alignment="CENTER">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fx:id="UserProfileImage" fitHeight="67.0" fitWidth="68.0" onMouseClicked="#ShowUserProfileStage" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/userImage1.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="UserProfileFullName" prefWidth="200.0" text="User Full Name:" />
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                        <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="900.0">
+                           <children>
+                              <ImageView fitHeight="50.0" fitWidth="50.0" onMouseClicked="#logout" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/logout.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </top>
+               <left>
+                  <VBox prefHeight="200.0" prefWidth="200.0" spacing="2.0" style="-fx-background-color: white; -fx-border-width: 4; -fx-border-color: #b15d13; -fx-border-radius: 10;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Label fx:id="ShowSidebarHome" alignment="CENTER" onMouseClicked="#ShowSidebarHome" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #b15d13;" text="Home" textFill="#fffbfb">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="SidebarBorrowBook" alignment="CENTER" onMouseClicked="#SidebarBorrowBook" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #b15d13;" text="Borrow Book" textFill="#fffbfb">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="SidebarBorrowedBook" alignment="CENTER" onMouseClicked="#SidebarBorrowedBook" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #b15d13; " text="Borrowed Book" textFill="#fffbfb">
+                           <VBox.margin>
+                              <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label fx:id="SidebarLogout" alignment="CENTER" onMouseClicked="#SidebarLogout" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #860000;" text="Logout" textFill="#fffbfb">
+                           <VBox.margin>
+                              <Insets bottom="5.0" top="5.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="System Bold Italic" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets top="25.0" />
+                     </padding>
+                     <BorderPane.margin>
+                        <Insets />
+                     </BorderPane.margin></VBox>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: white; -fx-border-width: 4; -fx-background-radius: 10;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="AnchorPaneHome" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <Label alignment="CENTER" layoutX="499.0" layoutY="326.0" text="Welcom User" textFill="WHITE">
+                                 <font>
+                                    <Font name="Arial Narrow Bold" size="96.0" />
+                                 </font>
+                              </Label>
+                           </children></AnchorPane>
+                        <AnchorPane fx:id="AnchorPaneBorrowBook" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 10;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" layoutX="98.0" layoutY="14.0" prefHeight="100.0" prefWidth="200.0" spacing="15.0" style="-fx-background-color: white; -fx-background-radius: 10;" AnchorPane.bottomAnchor="625.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                                 <children>
+                                    <ComboBox fx:id="BorrowBookCategoryFilter" editable="true" onAction="#FilterBookOfCategory" prefHeight="45.0" prefWidth="200.0" promptText="Select Category" style="-fx-background-color: white; -fx-border-radius: 10; " styleClass="combo-box" />
+                                    <ComboBox fx:id="BrorowBookSelectFilter" editable="true" prefHeight="45.0" prefWidth="200.0" promptText="Select Book" style="fx-background-color: white; -fx-border-radius: 10; " styleClass="combo-box" />
+                                    <Button mnemonicParsing="false" onAction="#Search" prefHeight="45.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-width: 4; -fx-border-radius: 10;" text="Search" textFill="#b15d13">
+                                       <font>
+                                          <Font name="System Bold" size="15.0" />
+                                       </font></Button>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="150.0">
+                                 <children>
+                                    <TextField fx:id="publisherTFBorrow" layoutX="358.0" layoutY="366.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter publisher ..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Label layoutX="355.0" layoutY="337.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="publisher :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="copyCountTFBorrow" layoutX="718.0" layoutY="253.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter Count..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Label layoutX="715.0" layoutY="225.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="Copy Count :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="pageCountTFBorrow" layoutX="1084.0" layoutY="253.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter PageCount ..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Label layoutX="1081.0" layoutY="225.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="PageCount :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="publishDataTFBorrow" layoutX="358.0" layoutY="253.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter publishData ..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Label layoutX="355.0" layoutY="225.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="publishData :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="IsbnTFBorrow" layoutX="1084.0" layoutY="145.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter Isbn ..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Label layoutX="1081.0" layoutY="116.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="Isbn :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="authorTFBorrow" layoutX="718.0" layoutY="145.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter Author ..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Label layoutX="715.0" layoutY="116.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="Author :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="titleTFBorrow" layoutX="358.0" layoutY="145.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter Title ..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Label layoutX="355.0" layoutY="116.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="Title :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <ImageView fx:id="BorrowBookImage" fitHeight="195.0" fitWidth="224.0" layoutX="74.0" layoutY="177.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/addBook.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label layoutX="715.0" layoutY="337.0" prefWidth="300.0" style="-fx-border-radius: 10;" text="Category :" textFill="#b15d13">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets bottom="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <TextField fx:id="CategoryTFBorrow" layoutX="718.0" layoutY="366.0" prefHeight="45.0" prefWidth="300.0" promptText="Enter Category ..." style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 1;" />
+                                    <Button fx:id="btn_Borrow" layoutX="358.0" layoutY="473.0" mnemonicParsing="false" onAction="#BorrowBook" prefHeight="45.0" prefWidth="170.0" style="-fx-border-radius: 10; -fx-border-color: white; -fx-border-width: 4;" text="Borrow" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Button>
+                                    <Button layoutX="558.0" layoutY="473.0" mnemonicParsing="false" onAction="#clearBorrowBook" prefHeight="45.0" prefWidth="170.0" style="-fx-background-color: white; -fx-border-color: #b15d13; -fx-border-radius: 10; -fx-border-width: 4;" text="Clear" textFill="#b15d13">
+                                       <font>
+                                          <Font name="System Bold" size="17.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="AnchorPaneBorrowedBook" layoutX="20.0" layoutY="20.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-radius: 10;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0">
+                                 <children>
+                                    <HBox fx:id="borrowedBooksContainer" layoutX="23.0" layoutY="24.0" prefHeight="302.0" prefWidth="303.0" spacing="20.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children></AnchorPane>
+                     </children>
+                     <BorderPane.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </BorderPane.margin>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
